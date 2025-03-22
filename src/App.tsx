@@ -12,6 +12,10 @@ import {
 import { ImageComponent } from "./customcomponents/ImageComponent";
 
 import { FooterComponent } from "./customcomponents/FooterComponent";
+import paintImage from './assets/Paint.jpg'
+import hungryImage from './assets/hungry.jpg'
+import readBookImage from './assets/readbook.jpg'
+import toiletImage from './assets/toilet.jpg'
 
 function App() {
 
@@ -22,7 +26,7 @@ function App() {
 
   const data: ImageData[] = [
 
-    {id:1,src:'/src/assets/hungry.jpg'},{id:2,src:'/src/assets/Paint.jpg'},{id:3,src:'/src/assets/readbook.jpg'},{id:4,src:'/src/assets/toilet.jpg'}
+    {id:1,src:hungryImage},{id:2,src: paintImage},{id:3,src:readBookImage},{id:4,src:toiletImage}
 ]
 
   const clickHandler = (id:number)=>{
