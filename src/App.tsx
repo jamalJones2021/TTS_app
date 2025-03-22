@@ -10,10 +10,21 @@ import {
 } from "@/components/ui/carousel";
 
 import { ImageComponent } from "./customcomponents/ImageComponent";
-import { imageUrls } from "/data";
+
 import { FooterComponent } from "./customcomponents/FooterComponent";
 
 function App() {
+
+  type ImageData ={
+    id: number,
+    src:string
+}
+
+  const data: ImageData[] = [
+
+    {id:1,src:'src/assets/hungry.jpg'},{id:2,src:'src/assets/Paint.jpg'},{id:3,src:'src/assets/readbook.jpg'},{id:4,src:'src/assets/toilet.jpg'}
+]
+
   const clickHandler = (id:number)=>{
     let text;
     
@@ -52,7 +63,7 @@ speak(text)
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <Carousel>
         <CarouselContent>
-          {imageUrls.map((item) => (
+          {data.map((item) => (
             <CarouselItem key={item.id}>
               <ImageComponent key={item.id} id={item.id} src={item.src} handler={clickHandler}/>
             </CarouselItem>
